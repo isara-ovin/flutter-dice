@@ -1,16 +1,13 @@
-# dice_app
+# Dice_app
 
-A new Flutter project.
+2nd Flutter project.
 
-## Getting Started
+- Introduction to Stateful states
+- Expanded widget for auto sizing (if required add a padding)
+- Intro to TextButton widget (previously known as FlatButton)
+- Handeling button state re rendering on onPressed ==> setState() functions
 
-This project is a starting point for a Flutter application.
+## Screenshot of the app
 
-A few resources to get you started if this is your first Flutter project:
+<img width="471" alt="Screenshot 2021-08-29 at 22 06 27" src="https://user-images.githubusercontent.com/78439925/131258163-ee57e1f2-ca37-4b09-ba35-0837761bebae.png">
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
