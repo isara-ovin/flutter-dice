@@ -5,7 +5,7 @@
 - Introduction to Stateful states
 - Expanded widget for auto sizing (if required add a padding)
 - Intro to TextButton widget (previously known as FlatButton)
-- Handeling button state re rendering on onPressed ==> setState() functions
+- Handling button state re rendering on onPressed ==> setState() functions
 
 ## Screenshot of the app
 
