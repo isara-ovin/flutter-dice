@@ -1,6 +1,14 @@
-import 'dart:developer';
+import 'dart:developer' as dev;
+import 'dart:math';
 
 import 'package:flutter/material.dart';
+
+class DicePage extends StatefulWidget {
+  const DicePage({Key? key}) : super(key: key);
+
+  @override
+  _DicePageState createState() => _DicePageState();
+}
 
 void main() {
   return runApp(MaterialApp(
@@ -20,7 +28,14 @@ void main() {
   ));
 }
 
-class DicePage extends StatelessWidget {
+int diceValue() {
+  final _random = Random();
+  return _random.nextInt(6) + 1;
+}
+
+class _DicePageState extends State<DicePage> {
+  int lefDiceValue = 1;
+  int rightDiceValue = 1;
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -30,17 +45,22 @@ class DicePage extends StatelessWidget {
           Expanded(
             child: TextButton(
               onPressed: () {
-                log('On left');
+                setState(() {
+                  lefDiceValue = diceValue();
+                });
               },
-              child: Image.asset('images/dice1.png'),
+              child: Image.asset('images/dice$lefDiceValue.png'),
             ),
           ),
           Expanded(
             child: TextButton(
               onPressed: () {
-                log('On Right');
+                setState(() {
+                  rightDiceValue = diceValue();
+                });
+                dev.log('On Right');
               },
-              child: Image.asset('images/dice2.png'),
+              child: Image.asset('images/dice$rightDiceValue.png'),
             ),
           ),
         ],
@@ -48,3 +68,7 @@ class DicePage extends StatelessWidget {
     );
   }
 }
+
+// class DicePage extends StatelessWidget {
+//
+// }
